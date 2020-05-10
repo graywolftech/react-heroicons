@@ -15,7 +15,7 @@ function toPascalCase(text) {
 }
 
 const folder = path.join(__dirname, "heroicons");
-const iconsFolder = path.join(__dirname, ".."); // Beware that this could break if the file is moved
+const iconsFolder = __dirname; // Beware that this could break if the file is moved
 
 const gitRepo = "git clone https://github.com/refactoringui/heroicons.git";
 
