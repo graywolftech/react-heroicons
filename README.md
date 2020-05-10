@@ -12,7 +12,7 @@ First, install this library!
 npm install --save @graywolfai/react-heroicons
 ```
 
-Then, just import the icons you want to use like you would any `svg` component!
+Now you have access to the entire `heroicons` library! You use them like you would any `svg` component.
 ```tsx
 import { MdArchive } from "@graywolfai/react-heroicons/outline-md/md-archive";
 import { MdArchive } from "@graywolfai/react-heroicons/solid-sm/sm-archive"; // or
