@@ -28,5 +28,17 @@ export const SomeComponent = () => {
 
 > Note the above example assumes you are using [`Tailwind CSS`](https://tailwindcss.com/) but the color is easily stylable by using the CSS `color` property.
 
+## Publishing
+```
+# first build
+npm run build
+
+# then tag (make sure to push the commit/tag to GitHub)
+npm version
+
+# Then publish!
+npm publish
+```
+
 ## References
 - This [article](http://nicolasgallagher.com/making-svg-icon-libraries-for-react-apps/) is a nice reference for creating `React` component libraries.
