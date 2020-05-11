@@ -1,3 +1,6 @@
+node_modules
 outline-md
-solid-md
+solid-sm
 heroicons
+index.ts
+dist

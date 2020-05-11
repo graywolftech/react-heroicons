@@ -1,7 +1,7 @@
 # React Heroicons
 > A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
-This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components.
+This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components bundled in `esm` format.
 
 ## Previewing the Icons
 Preview the icons at [heroicons.dev](https://heroicons.dev) (Made by [`codex-zaydek`](https://github.com/codex-zaydek)).
@@ -14,13 +14,14 @@ npm install --save @graywolfai/react-heroicons
 
 Now you have access to the entire `heroicons` library! You use them like you would any `svg` component.
 ```tsx
-import { MdArchive } from "@graywolfai/react-heroicons/outline-md/md-archive";
-import { MdArchive } from "@graywolfai/react-heroicons/solid-sm/sm-archive"; // or
+import { MdArchive } from "@graywolfai/react-heroicons";
+import { SmArchive } from "@graywolfai/react-heroicons"; // or
 
 export const SomeComponent = () => {
   return (
     ...
     <MdArchive className="h-6 w-6 text-gray-500"></MdArchive>
+    <SmArchive className="h-6 w-6 text-gray-500"></SmArchive> // or
     ...
   )
 }
@@ -30,11 +31,14 @@ export const SomeComponent = () => {
 
 ## Publishing
 ```
-# first build
-npm run build
+# first generate the `tsx` files
+npm run generate
+
+# then bundle them into an ESM format
+npm run bundle
 
 # then tag (make sure to push the commit/tag to GitHub)
-npm version
+npm version major|minor|patch
 
 # Then publish!
 npm publish

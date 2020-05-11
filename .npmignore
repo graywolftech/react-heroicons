@@ -1,2 +1,4 @@
 scripts
 .vscode
+*.tsx
+# TODO check which files are being uploaded
