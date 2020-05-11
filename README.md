@@ -37,7 +37,7 @@ npm run generate
 # then bundle them into an ESM format
 npm run bundle
 
-# then tag (make sure to push the commit/tag to GitHub)
+# then tag (make sure to push the commit/tag to GitHub and create a releaes)
 npm version major|minor|patch
 
 # Then publish!
