@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate": "node build.js",
-    "bundle": "rollup --config",
+    "bundle": "rollup --config && rm -rf dist/outline-md && rm -rf dist/solid-sm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "@types/react": "^16.9.35",
     "react": "^16.13.1",
     "rollup": "^2.9.1",
+    "rollup-plugin-dts": "^1.4.6",
     "tslib": "^1.11.2",
     "typescript": "^3.8.3"
   }
