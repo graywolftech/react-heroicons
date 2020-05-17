@@ -47,10 +47,19 @@ const processRepo = () => {
           return;
         }
 
-        const outFileName = `${everythingButExtension}.tsx`;
+        // Remove sm- or md-
+        const prefix = everythingButExtension.substr(0, everythingButExtension.indexOf("-"))
+        const prefixRemoved = everythingButExtension.substr(prefix.length + 1);
+
+        let outName = prefixRemoved;
+        if (prefix === "md") {
+          outName += "-outline";
+        }
+
+        const outFileName = `${outName}.tsx`;
         const out = path.join(outFolder, outFileName);
 
-        const pascalName = toPascalCase(everythingButExtension);
+        const pascalName = toPascalCase(outName);
 
         let contents = fs.readFileSync(src).toString();
         // React has different names for these (ie. they are camel cased)
@@ -83,7 +92,8 @@ export const ${pascalName} = (props: React.SVGProps<SVGSVGElement>) => {
 
     fs.writeFileSync(
       "index.ts",
-      imports.map(([importPath, name]) => {
+      imports.sort(([_, a], [__, b]) => a.localeCompare(b)).map(([importPath, name]) => {
+        console.log(`↳ ${name}`);
         return `export { ${name} } from "./${importPath.split('.')[0]}";`
       }).join("\n") + "\n",
     )
