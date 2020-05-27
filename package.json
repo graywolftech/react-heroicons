@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "generate": "node build.js",
-    "bundle": "rollup --config && rm -rf dist/outline-md && rm -rf dist/solid-sm",
+    "bundle": "rollup --config && rm -rf dist/outline && rm -rf dist/solid",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

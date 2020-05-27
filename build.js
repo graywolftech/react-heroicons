@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { exec } = require("child_process");
+const { exec, execSync } = require("child_process");
 
 function clearAndUpper(text) {
   return text.replace(/-/, "").toUpperCase();
@@ -23,9 +23,10 @@ const imports = [];
 
 const processRepo = () => {
   try {
-    ["outline-md", "solid-sm"].forEach((name) => {
-      const srcFolder = path.join(folder, "dist", name);
+    ["outline", "solid"].forEach((name) => {
+      const srcFolder = path.join(folder, name);
       const outFolder = path.join(iconsFolder, name);
+      execSync(`rm -rf ${outFolder}`);
 
       if (!fs.existsSync(outFolder)) {
         console.log(`Creating ${outFolder}`);
@@ -37,25 +38,19 @@ const processRepo = () => {
         const src = path.join(srcFolder, svg);
 
         let everythingButExtension = svg.substr(0, svg.lastIndexOf("."));
-        if (name === 'solid-sm' && everythingButExtension === 'md-library') {
-          // This should not be in the solid-sm folder
-          // It's actually a dup so we can ignore it
-          return;
-        } else if (name === "outline-md" && everythingButExtension === "sm-view-grid-add") {
-          // again, this is a dup
-          // tracking https://github.com/refactoringui/heroicons/issues/39
-          return;
-        }
+        // if (name === 'solid-sm' && everythingButExtension === 'md-library') {
+        //   console.log("HELLYYY")
+        //   // This should not be in the solid-sm folder
+        //   // It's actually a dup so we can ignore it
+        //   return;
+        // } else if (name === "outline-md" && everythingButExtension === "sm-view-grid-add") {
+        //   console.log("HELLOO")
+        //   // again, this is a dup
+        //   // tracking https://github.com/refactoringui/heroicons/issues/39
+        //   return;
+        // }
 
-        // Remove sm- or md-
-        const prefix = everythingButExtension.substr(0, everythingButExtension.indexOf("-"))
-        const prefixRemoved = everythingButExtension.substr(prefix.length + 1);
-
-        let outName = prefixRemoved;
-        if (prefix === "md") {
-          outName += "-outline";
-        }
-
+        let outName = everythingButExtension + "-" + name; // name is "outline" or "solid"
         const outFileName = `${outName}.tsx`;
         const out = path.join(outFolder, outFileName);
 
@@ -74,6 +69,10 @@ const processRepo = () => {
 
         let processed = contents.trim().split("\n").join("\n    ");
         processed = `<svg {...props} ${processed.substr(4)}`;
+
+        if (everythingButExtension === "arrow-down") {
+          console.log(`Writing ${processed} to ${out}`);
+        }
 
         fs.writeFileSync(
           out,
@@ -103,7 +102,7 @@ export const ${pascalName} = (props: React.SVGProps<SVGSVGElement>) => {
   }
 }
 
-console.log(`Closing ${gitRepo} to ${folder}`);
+console.log(`Cloning ${gitRepo} to ${folder}`);
 exec(`${gitRepo} ${folder}`, (error) => {
   if (error) {
     console.log("The repo already exists!");
