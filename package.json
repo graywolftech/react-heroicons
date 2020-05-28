@@ -1,6 +1,6 @@
 {
   "name": "@graywolfai/react-heroicons",
-  "version": "1.0.0-1",
+  "version": "1.0.0",
   "description": "Heroicons as React components",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
