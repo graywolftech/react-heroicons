@@ -14,13 +14,13 @@ npm install --save @graywolfai/react-heroicons
 
 Now you have access to the entire `heroicons` library! They are formatted as [pascal case](https://techterms.com/definition/pascalcase) and have either nothing (solid format) or `Outline` (outline format) appended at the end. You use them like you would any `svg` component.
 ```tsx
-import { Archive } from "@graywolfai/react-heroicons";
+import { ArchiveSolid } from "@graywolfai/react-heroicons";
 import { ArchiveOutline } from "@graywolfai/react-heroicons"; // or
 
 export const SomeComponent = () => {
   return (
     ...
-    <Archive className="h-6 w-6 text-gray-500"></Archive>
+    <ArchiveSolid className="h-6 w-6 text-gray-500"></ArchiveSolid>
     <ArchiveOutline className="h-6 w-6 text-gray-500"></ArchiveOutline> // or
     ...
   )
