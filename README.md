@@ -3,7 +3,7 @@
 # React Heroicons
 > A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
-This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components bundled in `esm` format.
+This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components bundled in `ESM` format (ie. *no* CommonJS format).
 
 ## Previewing the Icons
 Preview the icons at [heroicons.dev](https://heroicons.dev) (Made by [`codex-zaydek`](https://github.com/codex-zaydek)).
