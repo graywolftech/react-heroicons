@@ -1,3 +1,5 @@
+[![@graywolfai/react-heroicons](https://badge.fury.io/js/%40graywolfai%2Freact-heroicons.svg)](https://badge.fury.io/js/%40graywolfai%2Freact-heroicons)
+
 # React Heroicons
 > A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
