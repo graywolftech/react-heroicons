@@ -34,6 +34,8 @@ export const SomeComponent = () => {
 ## Icons
 ```
 .
+↳ AcademicCapOutline
+↳ AcademicCapSolid
 ↳ AdjustmentsOutline
 ↳ AdjustmentsSolid
 ↳ AnnotationOutline
@@ -68,10 +70,14 @@ export const SomeComponent = () => {
 ↳ ArrowUpSolid
 ↳ AtSymbolOutline
 ↳ AtSymbolSolid
+↳ BackspaceOutline
+↳ BackspaceSolid
 ↳ BadgeCheckOutline
 ↳ BadgeCheckSolid
 ↳ BanOutline
 ↳ BanSolid
+↳ BeakerOutline
+↳ BeakerSolid
 ↳ BellOutline
 ↳ BellSolid
 ↳ BookmarkAltOutline
@@ -82,6 +88,10 @@ export const SomeComponent = () => {
 ↳ BookOpenSolid
 ↳ BriefcaseOutline
 ↳ BriefcaseSolid
+↳ CakeOutline
+↳ CakeSolid
+↳ CalculatorOutline
+↳ CalculatorSolid
 ↳ CalendarOutline
 ↳ CalendarSolid
 ↳ CameraOutline
@@ -104,6 +114,14 @@ export const SomeComponent = () => {
 ↳ CheckCircleSolid
 ↳ CheckOutline
 ↳ CheckSolid
+↳ ChevronDoubleDownOutline
+↳ ChevronDoubleDownSolid
+↳ ChevronDoubleLeftOutline
+↳ ChevronDoubleLeftSolid
+↳ ChevronDoubleRightOutline
+↳ ChevronDoubleRightSolid
+↳ ChevronDoubleUpOutline
+↳ ChevronDoubleUpSolid
 ↳ ChevronDownOutline
 ↳ ChevronDownSolid
 ↳ ChevronLeftOutline
@@ -112,6 +130,8 @@ export const SomeComponent = () => {
 ↳ ChevronRightSolid
 ↳ ChevronUpOutline
 ↳ ChevronUpSolid
+↳ ChipOutline
+↳ ChipSolid
 ↳ ClipboardCheckOutline
 ↳ ClipboardCheckSolid
 ↳ ClipboardCopyOutline
@@ -124,6 +144,8 @@ export const SomeComponent = () => {
 ↳ ClockSolid
 ↳ CloudDownloadOutline
 ↳ CloudDownloadSolid
+↳ CloudOutline
+↳ CloudSolid
 ↳ CloudUploadOutline
 ↳ CloudUploadSolid
 ↳ CodeOutline
@@ -136,6 +158,12 @@ export const SomeComponent = () => {
 ↳ ColorSwatchSolid
 ↳ CreditCardOutline
 ↳ CreditCardSolid
+↳ CubeOutline
+↳ CubeSolid
+↳ CubeTransparentOutline
+↳ CubeTransparentSolid
+↳ CurrencyBangladeshiOutline
+↳ CurrencyBangladeshiSolid
 ↳ CurrencyDollarOutline
 ↳ CurrencyDollarSolid
 ↳ CurrencyEuroOutline
@@ -148,8 +176,14 @@ export const SomeComponent = () => {
 ↳ CurrencyYenSolid
 ↳ CursorClickOutline
 ↳ CursorClickSolid
+↳ DatabaseOutline
+↳ DatabaseSolid
 ↳ DesktopComputerOutline
 ↳ DesktopComputerSolid
+↳ DeviceMobileOutline
+↳ DeviceMobileSolid
+↳ DeviceTabletOutline
+↳ DeviceTabletSolid
 ↳ DocumentAddOutline
 ↳ DocumentAddSolid
 ↳ DocumentDownloadOutline
@@ -161,7 +195,11 @@ export const SomeComponent = () => {
 ↳ DocumentRemoveSolid
 ↳ DocumentReportOutline
 ↳ DocumentReportSolid
+↳ DocumentSearchOutline
+↳ DocumentSearchSolid
 ↳ DocumentSolid
+↳ DocumentTextOutline
+↳ DocumentTextSolid
 ↳ DotsCircleHorizontalOutline
 ↳ DotsCircleHorizontalSolid
 ↳ DotsHorizontalOutline
@@ -186,8 +224,14 @@ export const SomeComponent = () => {
 ↳ EyeOffSolid
 ↳ EyeOutline
 ↳ EyeSolid
+↳ FastForwardOutline
+↳ FastForwardSolid
+↳ FilmOutline
+↳ FilmSolid
 ↳ FilterOutline
 ↳ FilterSolid
+↳ FingerPrintOutline
+↳ FingerPrintSolid
 ↳ FireOutline
 ↳ FireSolid
 ↳ FlagOutline
@@ -196,10 +240,14 @@ export const SomeComponent = () => {
 ↳ FolderAddSolid
 ↳ FolderDownloadOutline
 ↳ FolderDownloadSolid
+↳ FolderOpenOutline
+↳ FolderOpenSolid
 ↳ FolderOutline
 ↳ FolderRemoveOutline
 ↳ FolderRemoveSolid
 ↳ FolderSolid
+↳ GiftOutline
+↳ GiftSolid
 ↳ GlobeAltOutline
 ↳ GlobeAltSolid
 ↳ GlobeOutline
@@ -212,6 +260,8 @@ export const SomeComponent = () => {
 ↳ HeartSolid
 ↳ HomeOutline
 ↳ HomeSolid
+↳ IdentificationOutline
+↳ IdentificationSolid
 ↳ InboxInOutline
 ↳ InboxInSolid
 ↳ InboxOutline
@@ -234,12 +284,15 @@ export const SomeComponent = () => {
 ↳ LockClosedSolid
 ↳ LockOpenOutline
 ↳ LockOpenSolid
+↳ LoginOutline
 ↳ LogoutOutline
 ↳ LogoutSolid
 ↳ MailOpenOutline
 ↳ MailOpenSolid
 ↳ MailOutline
 ↳ MailSolid
+↳ MapOutline
+↳ MapSolid
 ↳ MenuAlt1Outline
 ↳ MenuAlt1Solid
 ↳ MenuAlt2Outline
@@ -254,12 +307,18 @@ export const SomeComponent = () => {
 ↳ MicrophoneSolid
 ↳ MinusCircleOutline
 ↳ MinusCircleSolid
+↳ MinusOutline
+↳ MinusSolid
 ↳ MoonOutline
 ↳ MoonSolid
+↳ MusicNoteOutline
+↳ MusicNoteSolid
 ↳ NewspaperOutline
 ↳ NewspaperSolid
 ↳ OfficeBuildingOutline
 ↳ OfficeBuildingSolid
+↳ PaperAirplaneOutline
+↳ PaperAirplaneSolid
 ↳ PaperClipOutline
 ↳ PaperClipSolid
 ↳ PauseOutline
@@ -270,6 +329,8 @@ export const SomeComponent = () => {
 ↳ PencilSolid
 ↳ PhoneIncomingOutline
 ↳ PhoneIncomingSolid
+↳ PhoneMissedCallOutline
+↳ PhoneMissedCallSolid
 ↳ PhoneOutgoingOutline
 ↳ PhoneOutgoingSolid
 ↳ PhoneOutline
@@ -282,6 +343,10 @@ export const SomeComponent = () => {
 ↳ PlusCircleSolid
 ↳ PlusOutline
 ↳ PlusSolid
+↳ PresentationChartBarOutline
+↳ PresentationChartBarSolid
+↳ PresentationChartLineOutline
+↳ PresentationChartLineSolid
 ↳ PrinterOutline
 ↳ PrinterSolid
 ↳ PuzzleOutline
@@ -292,16 +357,32 @@ export const SomeComponent = () => {
 ↳ QuestionMarkCircleSolid
 ↳ ReceiptRefundOutline
 ↳ ReceiptRefundSolid
+↳ ReceiptTaxOutline
+↳ ReceiptTaxSolid
 ↳ RefreshOutline
 ↳ RefreshSolid
 ↳ ReplyOutline
 ↳ ReplySolid
+↳ RewindOutline
+↳ RewindSolid
+↳ RssOutline
+↳ RssSolid
+↳ SaveAsOutline
+↳ SaveAsSolid
+↳ SaveOutline
+↳ SaveSolid
 ↳ ScaleOutline
 ↳ ScaleSolid
+↳ ScissorsOutline
+↳ ScissorsSolid
+↳ SearchCircleOutline
+↳ SearchCircleSolid
 ↳ SearchOutline
 ↳ SearchSolid
 ↳ SelectorOutline
 ↳ SelectorSolid
+↳ ServerOutline
+↳ ServerSolid
 ↳ ShareOutline
 ↳ ShareSolid
 ↳ ShieldCheckOutline
@@ -322,6 +403,10 @@ export const SomeComponent = () => {
 ↳ SpeakerphoneSolid
 ↳ StarOutline
 ↳ StarSolid
+↳ StatusOfflineOutline
+↳ StatusOfflineSolid
+↳ StatusOnlineOutline
+↳ StatusOnlineSolid
 ↳ StopOutline
 ↳ StopSolid
 ↳ SunOutline
@@ -332,6 +417,8 @@ export const SomeComponent = () => {
 ↳ SwitchHorizontalSolid
 ↳ SwitchVerticalOutline
 ↳ SwitchVerticalSolid
+↳ TableOutline
+↳ TableSolid
 ↳ TagOutline
 ↳ TagSolid
 ↳ TemplateOutline
@@ -352,6 +439,8 @@ export const SomeComponent = () => {
 ↳ TrendingDownSolid
 ↳ TrendingUpOutline
 ↳ TrendingUpSolid
+↳ TruckOutline
+↳ TruckSolid
 ↳ UploadOutline
 ↳ UploadSolid
 ↳ UserAddOutline
@@ -366,6 +455,10 @@ export const SomeComponent = () => {
 ↳ UserSolid
 ↳ UsersOutline
 ↳ UsersSolid
+↳ VariableOutline
+↳ VariableSolid
+↳ VideoCameraOutline
+↳ VideoCameraSolid
 ↳ ViewBoardsOutline
 ↳ ViewBoardsSolid
 ↳ ViewGridAddOutline
@@ -378,6 +471,8 @@ export const SomeComponent = () => {
 ↳ VolumeOffSolid
 ↳ VolumeUpOutline
 ↳ VolumeUpSolid
+↳ WifiOutline
+↳ WifiSolid
 ↳ XCircleOutline
 ↳ XCircleSolid
 ↳ XOutline
@@ -391,6 +486,7 @@ export const SomeComponent = () => {
 ## Publishing
 ```
 # first generate the `tsx` files
+# make sure to copy the output and replace the options above
 npm run generate
 
 # then bundle them into an ESM format
