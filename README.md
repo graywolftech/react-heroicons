@@ -285,6 +285,7 @@ export const SomeComponent = () => {
 ↳ LockOpenOutline
 ↳ LockOpenSolid
 ↳ LoginOutline
+↳ LoginSolid
 ↳ LogoutOutline
 ↳ LogoutSolid
 ↳ MailOpenOutline

@@ -38,18 +38,6 @@ const processRepo = () => {
         const src = path.join(srcFolder, svg);
 
         let everythingButExtension = svg.substr(0, svg.lastIndexOf("."));
-        // if (name === 'solid-sm' && everythingButExtension === 'md-library') {
-        //   console.log("HELLYYY")
-        //   // This should not be in the solid-sm folder
-        //   // It's actually a dup so we can ignore it
-        //   return;
-        // } else if (name === "outline-md" && everythingButExtension === "sm-view-grid-add") {
-        //   console.log("HELLOO")
-        //   // again, this is a dup
-        //   // tracking https://github.com/refactoringui/heroicons/issues/39
-        //   return;
-        // }
-
         let outName = everythingButExtension + "-" + name; // name is "outline" or "solid"
         const outFileName = `${outName}.tsx`;
         const out = path.join(outFolder, outFileName);
@@ -69,10 +57,6 @@ const processRepo = () => {
 
         let processed = contents.trim().split("\n").join("\n    ");
         processed = `<svg {...props} ${processed.substr(4)}`;
-
-        if (everythingButExtension === "arrow-down") {
-          console.log(`Writing ${processed} to ${out}`);
-        }
 
         fs.writeFileSync(
           out,
