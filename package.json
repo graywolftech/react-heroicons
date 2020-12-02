@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/graywolftech/react-heroicons#readme",
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1 || ^17"
   },
   "files": [
     "dist"
