@@ -17,14 +17,14 @@ function toPascalCase(text) {
 const folder = path.join(__dirname, "heroicons");
 const iconsFolder = __dirname; // Beware that this could break if the file is moved
 
-const gitRepo = "git clone https://github.com/refactoringui/heroicons.git";
+const gitRepo = "git clone https://github.com/tailwindlabs/heroicons.git";
 
 const imports = [];
 
 const processRepo = () => {
   try {
     ["outline", "solid"].forEach((name) => {
-      const srcFolder = path.join(folder, name);
+      const srcFolder = path.join(folder, "optimized", name);
       const outFolder = path.join(iconsFolder, name);
       execSync(`rm -rf ${outFolder}`);
 

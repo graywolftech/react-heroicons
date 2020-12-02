@@ -309,6 +309,8 @@ export const SomeComponent = () => {
 ↳ MinusCircleOutline
 ↳ MinusCircleSolid
 ↳ MinusOutline
+↳ MinusSmOutline
+↳ MinusSmSolid
 ↳ MinusSolid
 ↳ MoonOutline
 ↳ MoonSolid
@@ -343,6 +345,8 @@ export const SomeComponent = () => {
 ↳ PlusCircleOutline
 ↳ PlusCircleSolid
 ↳ PlusOutline
+↳ PlusSmOutline
+↳ PlusSmSolid
 ↳ PlusSolid
 ↳ PresentationChartBarOutline
 ↳ PresentationChartBarSolid
