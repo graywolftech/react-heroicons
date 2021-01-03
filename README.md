@@ -490,6 +490,9 @@ export const SomeComponent = () => {
 
 ## Publishing
 ```
+# Make sure you get the latest copy
+rm -rf heroicons
+
 # first generate the `tsx` files
 # make sure to copy the output and replace the options above
 npm run generate

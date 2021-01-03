@@ -41,10 +41,9 @@ const processRepo = () => {
         let outName = everythingButExtension + "-" + name; // name is "outline" or "solid"
         const outFileName = `${outName}.tsx`;
         const out = path.join(outFolder, outFileName);
-
         const pascalName = toPascalCase(outName);
-
         let contents = fs.readFileSync(src).toString();
+
         // React has different names for these (ie. they are camel cased)
         contents = contents.replace(
           /(clip-rule|fill-rule|stroke-linecap|stroke-linejoin|stroke-width)/g,
@@ -52,6 +51,10 @@ const processRepo = () => {
             return toCamelCase(match);
           },
         );
+
+        // Remove fill in academic-cap.svg and truck.svg
+        // See https://github.com/tailwindlabs/heroicons/issues/93
+        contents = contents.replace(/ fill="#fff"/, "")
 
         imports.push([path.join(name, outFileName), pascalName]);
 
