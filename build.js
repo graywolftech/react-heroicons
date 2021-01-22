@@ -56,7 +56,7 @@ const processRepo = () => {
         // Remove fill in academic-cap.svg and truck.svg
         // Also remove hardcoded stroke in arrows-expand, folder-add, folder-download and folder-remove
         contents = contents.replace(/ fill="#fff"/, "")
-        contents = contents.replace(/ stroke="#[a-zA-Z0-9]+"/, "")
+        contents = contents.replace(/ stroke="#[a-zA-Z0-9]+"/, " stroke=\"currentColor\"")
 
         imports.push([path.join(name, outFileName), pascalName]);
 
