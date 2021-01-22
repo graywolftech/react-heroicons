@@ -52,9 +52,11 @@ const processRepo = () => {
           },
         );
 
+        // Tracking for these issues https://github.com/tailwindlabs/heroicons/issues/93
         // Remove fill in academic-cap.svg and truck.svg
-        // See https://github.com/tailwindlabs/heroicons/issues/93
+        // Also remove hardcoded stroke in arrows-expand, folder-add, folder-download and folder-remove
         contents = contents.replace(/ fill="#fff"/, "")
+        contents = contents.replace(/ stroke="#[a-zA-Z0-9]+"/, "")
 
         imports.push([path.join(name, outFileName), pascalName]);
 

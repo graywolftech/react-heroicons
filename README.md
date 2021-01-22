@@ -506,6 +506,3 @@ npm version major|minor|patch
 # Then publish!
 npm publish
 ```
-
-## References
-- This [article](http://nicolasgallagher.com/making-svg-icon-libraries-for-react-apps/) is a nice reference for creating `React` component libraries.
