@@ -1,20 +1,25 @@
 [![@graywolfai/react-heroicons](https://badge.fury.io/js/%40graywolfai%2Freact-heroicons.svg)](https://badge.fury.io/js/%40graywolfai%2Freact-heroicons)
 
 # React Heroicons
+
 > A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
-This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components bundled in `ESM` format (ie. *no* CommonJS format).
+This repository contains the [`heroicons`](https://github.com/refactoringui/heroicons) made by the team from [`refactoringui`](https://refactoringui.com/) as `React` components bundled in `ESM` format (ie. _no_ CommonJS format).
 
 ## Previewing the Icons
+
 Preview the icons at [heroicons.dev](https://heroicons.dev) (Made by [`codex-zaydek`](https://github.com/codex-zaydek)).
 
 ## Installation & Usage
+
 First, install this library!
+
 ```
 npm install --save @graywolfai/react-heroicons
 ```
 
 Now you have access to the entire `heroicons` library! They are formatted as [pascal case](https://techterms.com/definition/pascalcase) and have either nothing (solid format) or `Outline` (outline format) appended at the end. You use them like you would any `svg` component.
+
 ```tsx
 import { ArchiveSolid } from "@graywolfai/react-heroicons";
 import { ArchiveOutline } from "@graywolfai/react-heroicons"; // or
@@ -32,6 +37,7 @@ export const SomeComponent = () => {
 > Note the above example assumes you are using [`Tailwind CSS`](https://tailwindcss.com/) but the color is easily stylable by using the CSS `color` property.
 
 ## Icons
+
 ```
 .
 ↳ AcademicCapOutline
@@ -489,6 +495,7 @@ export const SomeComponent = () => {
 ```
 
 ## Publishing
+
 ```
 # Make sure you get the latest copy
 rm -rf heroicons
