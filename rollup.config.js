@@ -1,14 +1,14 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
 export default [
   {
-    input: 'index.ts',
+    input: "index.ts",
     output: {
-      dir: 'dist',
-      format: 'module'
+      dir: "dist",
+      format: "module",
     },
-    plugins: [typescript()]
+    plugins: [typescript()],
   },
   {
     input: "dist/index.d.ts",

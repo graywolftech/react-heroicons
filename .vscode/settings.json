@@ -2,5 +2,7 @@
   "cSpell.words": [
     "graywolfai",
     "heroicons"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }

@@ -49,14 +49,17 @@ const processRepo = () => {
           /(clip-rule|fill-rule|stroke-linecap|stroke-linejoin|stroke-width)/g,
           (match) => {
             return toCamelCase(match);
-          },
+          }
         );
 
         // Tracking for these issues https://github.com/tailwindlabs/heroicons/issues/93
         // Remove fill in academic-cap.svg and truck.svg
         // Also remove hardcoded stroke in arrows-expand, folder-add, folder-download and folder-remove
-        contents = contents.replace(/ fill="#fff"/, "")
-        contents = contents.replace(/ stroke="#[a-zA-Z0-9]+"/, " stroke=\"currentColor\"")
+        contents = contents.replace(/ fill="#fff"/, "");
+        contents = contents.replace(
+          / stroke="#[a-zA-Z0-9]+"/,
+          ' stroke="currentColor"'
+        );
 
         imports.push([path.join(name, outFileName), pascalName]);
 
@@ -73,23 +76,26 @@ export const ${pascalName} = (props: React.SVGProps<SVGSVGElement>) => {
     ${processed}
   )
 }
-          `.trim() + "\n",
+          `.trim() + "\n"
         );
       });
     });
 
     fs.writeFileSync(
       "index.ts",
-      imports.sort(([_, a], [__, b]) => a.localeCompare(b)).map(([importPath, name]) => {
-        console.log(`↳ ${name}`);
-        return `export { ${name} } from "./${importPath.split('.')[0]}";`
-      }).join("\n") + "\n",
-    )
+      imports
+        .sort(([_, a], [__, b]) => a.localeCompare(b))
+        .map(([importPath, name]) => {
+          console.log(`↳ ${name}`);
+          return `export { ${name} } from "./${importPath.split(".")[0]}";`;
+        })
+        .join("\n") + "\n"
+    );
   } finally {
     // console.log("Removing the repo...");
     // exec(`rm -rf ${folder}`);
   }
-}
+};
 
 console.log(`Cloning ${gitRepo} to ${folder}`);
 exec(`${gitRepo} ${folder}`, (error) => {

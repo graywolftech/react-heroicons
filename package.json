@@ -38,6 +38,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.1",
     "@types/react": "^16.9.35",
+    "prettier": "^2.2.1",
     "react": "^16.13.1",
     "rollup": "^2.9.1",
     "rollup-plugin-dts": "^1.4.6",
