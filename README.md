@@ -72,6 +72,14 @@ export const SomeComponent = () => {
 ↳ ArrowRightSolid
 ↳ ArrowsExpandOutline
 ↳ ArrowsExpandSolid
+↳ ArrowSmDownOutline
+↳ ArrowSmDownSolid
+↳ ArrowSmLeftOutline
+↳ ArrowSmLeftSolid
+↳ ArrowSmRightOutline
+↳ ArrowSmRightSolid
+↳ ArrowSmUpOutline
+↳ ArrowSmUpSolid
 ↳ ArrowUpOutline
 ↳ ArrowUpSolid
 ↳ AtSymbolOutline

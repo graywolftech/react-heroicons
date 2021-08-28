@@ -1,7 +1,12 @@
 {
   "cSpell.words": [
+    "Qrcode",
+    "Wifi",
     "graywolfai",
-    "heroicons"
+    "heroicons",
+    "refactoringui",
+    "stylable",
+    "zaydek"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true

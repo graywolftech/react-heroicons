@@ -23,9 +23,9 @@ const imports = [];
 
 const processRepo = () => {
   try {
-    ["outline", "solid"].forEach((name) => {
-      const srcFolder = path.join(folder, "optimized", name);
-      const outFolder = path.join(iconsFolder, name);
+    ["outline", "solid"].forEach((svgType) => {
+      const srcFolder = path.join(folder, "optimized", svgType);
+      const outFolder = path.join(iconsFolder, svgType);
       execSync(`rm -rf ${outFolder}`);
 
       if (!fs.existsSync(outFolder)) {
@@ -38,7 +38,7 @@ const processRepo = () => {
         const src = path.join(srcFolder, svg);
 
         let everythingButExtension = svg.substr(0, svg.lastIndexOf("."));
-        let outName = everythingButExtension + "-" + name; // name is "outline" or "solid"
+        let outName = everythingButExtension + "-" + svgType;
         const outFileName = `${outName}.tsx`;
         const out = path.join(outFolder, outFileName);
         const pascalName = toPascalCase(outName);
@@ -61,7 +61,7 @@ const processRepo = () => {
           ' stroke="currentColor"'
         );
 
-        imports.push([path.join(name, outFileName), pascalName]);
+        imports.push([path.join(svgType, outFileName), pascalName]);
 
         let processed = contents.trim().split("\n").join("\n    ");
         processed = `<svg {...props} ref={ref} ${processed.substr(4)}`;
