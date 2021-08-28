@@ -64,18 +64,18 @@ const processRepo = () => {
         imports.push([path.join(name, outFileName), pascalName]);
 
         let processed = contents.trim().split("\n").join("\n    ");
-        processed = `<svg {...props} ${processed.substr(4)}`;
+        processed = `<svg {...props} ref={ref} ${processed.substr(4)}`;
 
         fs.writeFileSync(
           out,
           `
 import React from "react";
 
-export const ${pascalName} = (props: React.SVGProps<SVGSVGElement>) => {
+export const ${pascalName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props, ref) => {
   return (
     ${processed}
   )
-}
+})
           `.trim() + "\n"
         );
       });
