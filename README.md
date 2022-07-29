@@ -520,4 +520,7 @@ npm version major|minor|patch
 
 # Then publish!
 npm publish
+
+# And push
+git push && git push --tags
 ```
