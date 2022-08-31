@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "preserve",
     "strict": true,
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "target": "esNext",
+    "module": "es2020",
+    "moduleResolution": "node"
   }
 }
