@@ -904,7 +904,7 @@ npm run generate
 # then bundle them into an ESM format
 
 ```
-npm run bundle
+npm run compile
 ```
 
 # then tag (make sure to push the commit/tag to GitHub and create a release)
