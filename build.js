@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { exec, execSync } = require("child_process");
+const { exec } = require("child_process");
 
 function clearAndUpper(text) {
   return text.replace(/-/, "").toUpperCase();
@@ -19,7 +19,7 @@ const iconsFolder = __dirname; // Beware that this could break if the file is mo
 
 const gitRepo = "git clone https://github.com/tailwindlabs/heroicons.git";
 
-const imports = [];
+const exportNames = [];
 
 const iconTypes = {
   outline: ["24", "outline"],
@@ -28,25 +28,16 @@ const iconTypes = {
 };
 
 const processRepo = () => {
+  let code = 'import React from "react";\n\n';
   try {
     Object.entries(iconTypes).forEach(([svgType, iconPath]) => {
       const srcFolder = path.join(folder, "optimized", ...iconPath);
-      const outFolder = path.join(iconsFolder, svgType);
-      execSync(`rm -rf ${outFolder}`);
 
-      if (!fs.existsSync(outFolder)) {
-        console.log(`Creating ${outFolder}`);
-        fs.mkdirSync(outFolder);
-      }
-
-      console.log(`Moving icons from ${srcFolder} to ${outFolder}!`);
       fs.readdirSync(srcFolder).map((svg) => {
         const src = path.join(srcFolder, svg);
 
         let everythingButExtension = svg.substr(0, svg.lastIndexOf("."));
         let outName = everythingButExtension + "-" + svgType;
-        const outFileName = `${outName}.tsx`;
-        const out = path.join(outFolder, outFileName);
         const pascalName = toPascalCase(outName);
         let contents = fs.readFileSync(src).toString();
 
@@ -67,36 +58,32 @@ const processRepo = () => {
           ' stroke="currentColor"'
         );
 
-        imports.push([path.join(svgType, outFileName), pascalName]);
+        exportNames.push(pascalName);
 
         let processed = contents.trim().split("\n").join("\n    ");
         processed = `<svg {...props} ref={ref} ${processed.substr(4)}`;
 
-        fs.writeFileSync(
-          out,
+        const props = "React.SVGProps<SVGSVGElement>";
+        const component = "SVGSVGElement";
+        // Here I add "React.ForwardRefExoticComponent<React.PropsWithoutRef<${props}> & React.RefAttributes<${component}>>"
+        // so that the declaration file is smaller. If the above code is removed it generates a 6.5 MB file as oppose to a
+        // 139 KB file
+        code +=
           `
-import React from "react";
-
-export const ${pascalName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props, ref) => {
+export const ${pascalName}: React.ForwardRefExoticComponent<React.PropsWithoutRef<${props}> & React.RefAttributes<${component}>> = React.forwardRef<${component}, ${props}>((props, ref) => {
   return (
     ${processed}
   )
-})
-          `.trim() + "\n"
-        );
+});
+          `.trim() + "\n\n";
       });
     });
 
-    fs.writeFileSync(
-      "index.ts",
-      imports
-        .sort(([_, a], [__, b]) => a.localeCompare(b))
-        .map(([importPath, name]) => {
-          console.log(`↳ ${name}`);
-          return `export { ${name} } from "./${importPath.split(".")[0]}";`;
-        })
-        .join("\n") + "\n"
-    );
+    fs.writeFileSync("index.tsx", code);
+
+    for (const exportName of exportNames.sort((a, b) => a.localeCompare(b))) {
+      console.log(`↳ ${exportName}`);
+    }
   } finally {
     // console.log("Removing the repo...");
     // exec(`rm -rf ${folder}`);

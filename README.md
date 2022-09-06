@@ -888,33 +888,39 @@ export const SomeComponent = () => {
 ## Publishing
 
 # Make sure you get the latest copy
+
 ```
 rm -rf heroicons
 ```
 
 # first generate the `tsx` files
+
 # make sure to copy the output and replace the options above
+
 ```
 npm run generate
 ```
 
 # then bundle them into an ESM format
+
 ```
 npm run bundle
 ```
 
 # then tag (make sure to push the commit/tag to GitHub and create a release)
+
 ```
 npm version major|minor|patch
 ```
 
 # Then publish!
+
 ```
 npm publish
 ```
 
 # And push
+
 ```
 git push && git push --tags
 ```
-

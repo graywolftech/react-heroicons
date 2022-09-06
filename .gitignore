@@ -1,7 +1,8 @@
 node_modules
 heroicons
-index.ts
+index.tsx
 dist
 outline
 solid
 tiny-solid
+.DS_Store
