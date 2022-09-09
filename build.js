@@ -67,7 +67,7 @@ const processRepo = () => {
       // 139 KB file
       code +=
         `
-export const ${pascalName}: React.ForwardRefExoticComponent<React.PropsWithoutRef<${props}> & React.RefAttributes<${component}>> = React.forwardRef<${component}, ${props}>((props, ref) => {
+export const ${pascalName}: React.ForwardRefExoticComponent<React.PropsWithoutRef<${props}> & React.RefAttributes<${component}>> = /* @__PURE__ */ React.forwardRef<${component}, ${props}>((props, ref) => {
   return (
     ${processed}
   )
